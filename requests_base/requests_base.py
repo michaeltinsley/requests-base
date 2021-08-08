@@ -29,7 +29,7 @@ class BaseUrlSession(requests.Session):
         """
         Initialise the BaseUrlSession class.
 
-        :param base_url:
+        :param base_url: The base request URL
         """
         if base_url and not base_url.endswith("/"):
             base_url += "/"
@@ -48,10 +48,8 @@ class BaseUrlSession(requests.Session):
         URL from the base URL and the given URL.
 
         :param method: REST method name
-        :param url: URL for the new :class:`Request` object.
-        :param args:
-        :param kwargs:
-        :return:
+        :param url: The URL path of the request
+        :return: The request response
         """
         full_url = self.generate_url(url)
         return super().request(
@@ -65,8 +63,8 @@ class BaseUrlSession(requests.Session):
         """
         Generates the full request URL.
 
-        :param url: The
-        :return:
+        :param url: The URL path
+        :return: The full URL
         """
         if not url.startswith("/"):
             url = "/" + url
