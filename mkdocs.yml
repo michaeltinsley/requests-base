@@ -1,0 +1,10 @@
+site_name: Requests Base
+theme:
+  name: material
+  language: en
+site_description: A Requests Session with a Base URL
+site_author: Michael Tinsley
+repo_name: michaeltinsley/requests-base
+repo_url: https://github.com/michaeltinsley/requests-base
+nav:
+    - Home: index.md
